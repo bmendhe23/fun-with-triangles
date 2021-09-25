@@ -14,8 +14,6 @@ function calculateScore() {
     for(let value of formResults.values()) {
         if(value === correctAnswers[index]) {
             score++;
-        } else {
-            continue;
         }
         index++;
     }
