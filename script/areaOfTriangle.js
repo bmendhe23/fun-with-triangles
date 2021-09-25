@@ -8,7 +8,11 @@ btnSubmit.addEventListener("click", calculateArea);
 function calculateArea() {
     const base = parseInt(valueOfBase.value);
     const height = parseInt(valueOfHeight.value);
-    const areaOfTriangle = 0.5*(base*height);
-    
-    outputBox.innerText = "The area of the triangle is " + areaOfTriangle + " cm²";
+
+    if(Number.isNaN(base) || Number.isNaN(height)) {
+        outputBox.innerText = "The length of the hypotenuse is " + "0 cm²";    
+    } else {
+        const areaOfTriangle = 0.5*(base*height);
+        outputBox.innerText = "The area of the triangle is " + areaOfTriangle + " cm²";
+    }
 }

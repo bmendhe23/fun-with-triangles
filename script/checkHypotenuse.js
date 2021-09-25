@@ -8,8 +8,11 @@ btnSubmit.addEventListener("click", calculateHypotenuse);
 function calculateHypotenuse() {
     const a = parseInt(valueOfA.value);
     const b = parseInt(valueOfB.value);
-    const hypotenuseLength = Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
-    console.log(hypotenuseLength);
 
-    outputBox.innerText = "The length of the hypotenuse is " + hypotenuseLength + " cm";
+    if(Number.isNaN(a) && Number.isNaN(b)) {
+        outputBox.innerText = "The length of the hypotenuse is " + "0 cm";    
+    } else {
+        const hypotenuseLength = Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
+        outputBox.innerText = "The length of the hypotenuse is " + hypotenuseLength + " cm";
+    }
 }
