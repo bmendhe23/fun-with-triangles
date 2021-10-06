@@ -9,11 +9,11 @@ var showMessageIsTriangle = document.querySelector("#show-message-is-Triangle");
 btnCheckTriangle.addEventListener("click",isTriangleEventHandler);
 
 function isTriangleEventHandler() {
-    angle1 = parseInt(angle1.value);
-    angle2 = parseInt(angle2.value);
-    angle3 = parseInt(angle3.value);
+    numConvertedAngel1 = parseInt(angle1.value);
+    numConvertedAngel2 = parseInt(angle2.value);
+    numConvertedAngel3 = parseInt(angle3.value);
 
-    if((angle1 + angle2 + angle3)===180) {
+    if((numConvertedAngel1 + numConvertedAngel2 + numConvertedAngel3)===180) {
         showMessageIsTriangle.innerText = "Yayy, the angles form a triangle";
     } else {
         showMessageIsTriangle.innerText = "Oh Oh!, the angles do not form a triangle"
